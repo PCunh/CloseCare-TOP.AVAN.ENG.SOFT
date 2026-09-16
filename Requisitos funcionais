@@ -1,0 +1,37 @@
+# Requisitos Funcionais (RF)
+
+RF01: O sistema deve permitir o cadastro de usuários (paciente e profissional de saúde).
+RF02: O sistema deve impedir o cadastro de e-mails já existentes.
+RF03: O sistema deve permitir que usuários realizem login utilizando e-mail e senha.
+RF04: O sistema deve impedir o acesso com credenciais inválidas.
+RF05: O paciente deve poder visualizar os tipos de profissionais disponíveis.
+RF06: O sistema deve exibir apenas horários disponíveis do profissional selecionado.
+RF07: O sistema deve permitir confirmar o agendamento de uma consulta.
+RF08: O sistema deve tornar o horário indisponível após a confirmação da consulta.
+RF09: O paciente deve poder selecionar o profissional responsável pelo exame.
+RF10: O sistema deve exibir horários disponíveis para exames.
+RF11: O sistema deve permitir confirmar o agendamento do exame.
+RF12: O sistema deve associar o endereço cadastrado ao exame domiciliar.
+RF13: O profissional deve poder solicitar uma consulta para um paciente cadastrado.
+RF14: O sistema deve impedir solicitações para pacientes inexistentes.
+RF15: O profissional deve poder solicitar exames domiciliares.
+RF16: O sistema deve impedir o envio de solicitações com dados obrigatórios incompletos.
+RF17: Pacientes e profissionais devem poder visualizar a lista de consultas em ordem cronológica.
+RF18: O sistema deve informar quando não houver consultas cadastradas.
+RF19: Pacientes e profissionais devem poder visualizar a lista de exames.
+RF20: O sistema deve informar quando não houver exames registrados.
+RF21: Pacientes e profissionais devem poder remarcar consultas.
+RF22: O sistema deve impedir remarcações para horários indisponíveis.
+RF23: Pacientes e profissionais devem poder remarcar exames.
+RF24: O sistema deve impedir remarcações para horários inválidos.
+RF25: Pacientes e profissionais devem poder cancelar consultas.
+RF26: O sistema deve liberar o horário após o cancelamento da consulta.
+RF27: O sistema deve exibir erro quando a consulta não existir.
+RF28: Pacientes e profissionais devem poder cancelar exames.
+RF29: O sistema deve impedir o cancelamento de exames inexistentes.
+RF30: O profissional deve poder cadastrar datas e horários disponíveis.
+RF31: O profissional deve definir sua especialidade.
+RF32: O profissional deve definir o raio máximo de atendimento domiciliar.
+RF33: O sistema deve impedir o cadastro de horários duplicados.
+
+RF34: O sistema deve disponibilizar a agenda cadastrada para os pacientes.
