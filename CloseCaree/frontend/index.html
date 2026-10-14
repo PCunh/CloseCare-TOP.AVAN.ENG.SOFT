@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Close Care - ESBC</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="app.js?v=esbc-correcao-2" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Close Care</h1>
+    <p class="subtitulo">Atendimento domiciliar · Demonstração de componentes ESBC</p>
+    <nav aria-label="Navegação principal">
+      <a href="#inicio">Início</a>
+      <a href="#conta">Minha conta</a>
+      <a href="#disponibilidade">Disponibilidade</a>
+      <a href="#agendamentos">Agendamentos</a>
+    </nav>
+  </header>
+  <main id="inicio">
+    <section class="titulo-pagina">
+      <h2>Bem-vindo ao Close Care</h2>
+      <p>Gerencie seus horários e consultas domiciliares.</p>
+    </section>
+    <p id="mensagem" class="aviso-esbc" role="status" aria-live="polite">Faça login como profissional ou paciente para começar.</p>
+    <section id="conta" class="painel-esbc">
+      <div class="cartao-esbc">
+        <div class="cabecalho-cartao"><h2>Minha conta</h2><span class="sessao" id="session">Não conectado</span></div>
+        <div class="grade-dois">
+          <div>
+            <h3>Entrar no sistema</h3>
+            <form id="loginForm">
+              <div class="campo"><label for="loginEmail">E-mail</label><input id="loginEmail" type="email" required placeholder="seu@email.com"></div>
+              <div class="campo"><label for="loginSenha">Senha</label><input id="loginSenha" type="password" required></div>
+              <div><button type="submit">Entrar</button></div>
+            </form>
+            <button class="secondary" id="logout" type="button">Sair da conta</button>
+          </div>
+          <div>
+            <h3>Criar uma conta</h3>
+            <form id="cadastroForm">
+              <div class="campo"><label for="cadNome">Nome completo</label><input id="cadNome" required minlength="3"></div>
+              <div class="campo"><label for="cadEmail">E-mail</label><input id="cadEmail" type="email" required></div>
+              <div class="campo"><label for="cadSenha">Senha</label><input id="cadSenha" type="password" required minlength="8"></div>
+              <div class="campo"><label for="cadTipo">Tipo de usuário</label><select id="cadTipo"><option value="profissional">Profissional</option><option value="paciente">Paciente</option></select></div>
+              <div class="campo" id="especialidadeBox"><label for="cadEspecialidade">Especialidade</label><input id="cadEspecialidade" value="Enfermagem"></div>
+              <div><button type="submit">Cadastrar</button></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="profissional" class="painel-esbc hidden" aria-label="Painel do profissional">
+    <div id="disponibilidade" class="cartao-esbc">
+        <div class="cabecalho-cartao">
+            <h2>Disponibilizar horários</h2>
+            <span class="selo">IDisponibilidade</span>
+        </div>
+
+        <p>Cadastre as datas e horários em que você poderá realizar atendimentos.</p>
+
+        <form id="horarioForm" class="form-horario">
+            <label for="dataAtendimento">Data do atendimento</label>
+            <input type="date" id="dataAtendimento" required>
+
+            <label for="horaInicio">Hora de início</label>
+            <input type="time" id="horaInicio" value="09:00" required>
+
+            <label for="horaFim">Hora de término</label>
+            <input type="time" id="horaFim" value="10:00" required>
+
+            <button type="submit">Disponibilizar horário</button>
+        </form>
+    </div>
+</section>
+    <section id="paciente" class="painel-esbc hidden" aria-label="Painel do paciente">
+      <div class="cartao-esbc" id="disponibilidade-paciente">
+        <div class="cabecalho-cartao"><h2>Pesquisar profissionais e horários</h2><span class="selo">IDisponibilidade</span></div>
+        <p>Encontre um profissional e escolha um horário disponível para consulta.</p>
+        <div class="campo"><label for="profissionais">Selecione o profissional</label><select id="profissionais"></select></div>
+        <div class="barra-acoes"><h3>Horários disponíveis</h3><button id="refreshLivres" class="secondary small" type="button">Atualizar horários</button></div>
+        <div id="horariosLivres" class="itens" aria-live="polite"></div>
+      </div>
+      <div class="cartao-esbc" id="agendamentos">
+        <div class="cabecalho-cartao"><h2>Meus agendamentos</h2><span class="selo">IAgendamentos</span></div>
+        <p>Consulte suas reservas, remarque ou cancele uma consulta.</p>
+        <div class="barra-acoes"><h3>Consultas registradas</h3><button id="refreshAg" class="secondary small" type="button">Atualizar consultas</button></div>
+        <div id="meusAgendamentos" class="itens" aria-live="polite"></div>
+      </div>
+    </section>
+  </main>
+  <footer><p>Close Care - Atendimento domiciliar · Laboratório de ESBC</p></footer>
+</body>
+</html>
