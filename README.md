@@ -39,17 +39,13 @@ CloseCare/
 │   │   ├── disponibilidade_esbc.py    # Endpoints de disponibilidade
 │   │   └── agendamentos_esbc.py       # Endpoints de agendamento
 │   ├── components/
-│   │   ├── erros.py                   # Erros de regra de negócio
-│   │   ├── disponibilidade/
-│   │   │   ├── interface.py           # Contrato IDisponibilidade
-│   │   │   └── service.py             # Regras de disponibilidade
-│   │   └── agendamentos/
-│   │       ├── interface.py           # Contrato IAgendamentos
-│   │       └── service.py             # Regras de agendamento
-│   └── tests/
-│       ├── test_componentes.py        # Testes unitários dos serviços
-│       ├── test_estrutura_esbc.py      # Testes da estrutura e integração por interface
-│       └── test_integracao_postgres.py # Teste de integração com PostgreSQL
+│      ├── erros.py                   # Erros de regra de negócio
+│      ├── disponibilidade/
+│      │   ├── interface.py           # Contrato IDisponibilidade
+│      │   └── service.py             # Regras de disponibilidade
+│      └── agendamentos/
+│          ├── interface.py           # Contrato IAgendamentos
+│          └── service.py             # Regras de agendamento   
 └── frontend/
     ├── index.html                     # Interface principal
     ├── app.js                         # Lógica da interface e chamadas HTTP
